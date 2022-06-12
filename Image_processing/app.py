@@ -24,7 +24,7 @@ def black_and_white(img):
                 newblue = 0
 
             # set new pixel to new color values.
-            newpixel = image.Pixel(newred, newgreen, newblue)
+            newpixel = image.Pixel(int(newred), int(newgreen), int(newblue))
 
             img.setPixel(col, row, newpixel)
     # then draw the new images
@@ -69,7 +69,7 @@ def black_red_blue_green(img):
                 newblue = 255
 
             # set new pixel to new color values.
-            newpixel = image.Pixel(newred, newgreen, newblue)
+            newpixel = image.Pixel(int(newred), int(newgreen), int(newblue))
 
             newimg.setPixel(col, row, newpixel)
     # then draw the new images
@@ -132,7 +132,7 @@ def clarendon_effect(img):
                 newblue = blue_value
 
             # set new pixel to new color values.
-            newpixel = image.Pixel(newred, newgreen, newblue)
+            newpixel = image.Pixel(int(newred), int(newgreen), int(newblue))
 
             newimg.setPixel(col, row, newpixel)
 
@@ -163,7 +163,7 @@ def greyscale(img):
             newblue = gray_value
 
             # set new pixel to new color values.
-            newpixel = image.Pixel(newred, newgreen, newblue)
+            newpixel = image.Pixel(int(newred), int(newgreen), int(newblue))
 
             newimg.setPixel(col, row, newpixel)
     # then draw the new images
@@ -202,7 +202,7 @@ def rotate_multiples_of_90_deg(img, number):
 def enlargeXY(img, xscale, yscale):
     width = img.getWidth()
     height = img.getHeight()
-    newimg = image.EmptyImage(xscale*width, yscale*height)
+    newimg = image.EmptyImage(int(xscale*width), int(yscale*height))
     win = image.ImageWin(width, height)
     img.draw(win)
     for row in range(int(yscale*height)):
@@ -213,14 +213,14 @@ def enlargeXY(img, xscale, yscale):
 
 
 def BW_highContrast(img):
-    #get the height and width of the image
+    # get the height and width of the image
     width = img.getWidth()
     height = img.getHeight()
     newimg = image.EmptyImage(width, height)
     for row in range(height):
         for col in range(width):
             p = img.getPixel(col, row)
-            #What are the red, blue and green values for p?
+            # What are the red, blue and green values for p?
             red_value = p.getRed()
             green_value = p.getGreen()
             blue_value = p.getBlue()
@@ -237,8 +237,8 @@ def BW_highContrast(img):
                 newgreen = 0
                 newblue = 0
 
-            #set new pixel to new color values.
-            newpixel = image.Pixel(newred, newgreen, newblue)
+            # set new pixel to new color values.
+            newpixel = image.Pixel(int(newred), int(newgreen), int(newblue))
 
             newimg.setPixel(col, row, newpixel)
     # then draw the new images
@@ -248,14 +248,14 @@ def BW_highContrast(img):
 
 
 def lighten(img):
-    #get the height and width of the image
+    # get the height and width of the image
     width = img.getWidth()
     height = img.getHeight()
     newimg = image.EmptyImage(width, height)
     for row in range(height):
         for col in range(width):
             p = img.getPixel(col, row)
-            #What are the red, blue and green values for p?
+            # What are the red, blue and green values for p?
             red_value = p.getRed()
             green_value = p.getGreen()
             blue_value = p.getBlue()
@@ -265,8 +265,8 @@ def lighten(img):
             newgreen = int(255 - (255 - green_value)*scaling_factor)
             newblue = int(255 - (255 - blue_value)*scaling_factor)
 
-            #set new pixel to new color values.
-            newpixel = image.Pixel(newred, newgreen, newblue)
+            # set new pixel to new color values.
+            newpixel = image.Pixel(int(newred), int(newgreen), int(newblue))
 
             newimg.setPixel(col, row, newpixel)
     # then draw the new images
@@ -276,14 +276,14 @@ def lighten(img):
 
 
 def darken(img):
-    #get the height and width of the image
+    # get the height and width of the image
     width = img.getWidth()
     height = img.getHeight()
     newimg = image.EmptyImage(width, height)
     for row in range(height):
         for col in range(width):
             p = img.getPixel(col, row)
-            #What are the red, blue and green values for p?
+            # What are the red, blue and green values for p?
             red_value = p.getRed()
             green_value = p.getGreen()
             blue_value = p.getBlue()
@@ -293,8 +293,8 @@ def darken(img):
             newgreen = green_value*scaling_factor
             newblue = blue_value*scaling_factor
 
-            #set new pixel to new color values.
-            newpixel = image.Pixel(newred, newgreen, newblue)
+            # set new pixel to new color values.
+            newpixel = image.Pixel(int(newred), int(newgreen), int(newblue))
 
             newimg.setPixel(col, row, newpixel)
     # then draw the new images

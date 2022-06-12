@@ -19,9 +19,37 @@
 ## Usage
 
 ```python
-# black_red_blue_green
 original = image.Image("image.jpg")
+
+# black_red_blue_green
 final = black_red_blue_green(original)
 
+# vignette_effect
+final = vignette_effect(original)
 
+# clarendon_effect
+final = clarendon_effect(original)
+
+# greyscale
+final = greyscale(original)
+
+# rotate_90_deg
+final = rotate_90_deg(original)
+
+# rotate_multiples_of_90_deg
+final = rotate_multiples_of_90_deg(original, 90)
+
+# enlargeXY
+final = enlargeXY(original, 5, 1)
+newwin = image.ImageWin(final.getWidth(), final.getHeight())
+final.draw(newwin)
+
+# BW_highContrast
+final = BW_highContrast(original)
+
+# lighten
+final = lighten(original)
+
+# darken
+final = darken(original)
 ```
