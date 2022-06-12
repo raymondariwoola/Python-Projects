@@ -16,8 +16,12 @@
 
 
 
-<!-- ## Usage
+## Usage
 
 ```python
-print("Hello world!")
-``` -->
+# black_red_blue_green
+original = image.Image("image.jpg")
+final = black_red_blue_green(original)
+
+
+```

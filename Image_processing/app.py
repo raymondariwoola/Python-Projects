@@ -301,4 +301,3 @@ def darken(img):
     newwin = image.ImageWin(width, height)
     newimg.draw(newwin)
     return newimg
-
