@@ -92,7 +92,7 @@ def vignette_effect(img):
             newgreen = p.getGreen()*scaling_factor
             newblue = p.getBlue()*scaling_factor
             # set new pixel to new color values.
-            newpixel = image.Pixel(newred, newgreen, newblue)
+            newpixel = image.Pixel(int(newred), int(newgreen), int(newblue))
             newimg.setPixel(col, row, newpixel)
 
     newwin = image.ImageWin(width, height)
